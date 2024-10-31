@@ -1,4 +1,5 @@
 ## Module Report
+
 ### Unknown Global
 
 **Global**: `Ember.testing`
@@ -6,7 +7,6 @@
 **Location**: `app/components/auth-jwt.js` at line 9
 
 ```js
-
 /* eslint-disable ember/no-ember-testing-in-module-scope */
 const WAIT_TIME = Ember.testing ? 0 : 500;
 const ERROR_WINDOW_CLOSED =
@@ -76,11 +76,11 @@ const ERROR_WINDOW_CLOSED =
 **Location**: `lib/core/addon/components/ttl-form.js` at line 82
 
 ```js
-    this.set('time', parsedTime);
-    this.handleChange();
-    if (Ember.testing) {
-      return;
-    }
+this.set('time', parsedTime);
+this.handleChange();
+if (Ember.testing) {
+  return;
+}
 ```
 
 ### Unknown Global
@@ -118,11 +118,10 @@ export default function waitForError(opts) {
 **Location**: `tests/helpers/wait-for-error.js` at line 8
 
 ```js
-
-  let error = null;
-  Ember.onerror = err => {
-    error = err;
-  };
+let error = null;
+Ember.onerror = (err) => {
+  error = err;
+};
 ```
 
 ### Unknown Global
@@ -174,11 +173,11 @@ export default function waitForError(opts) {
 **Location**: `tests/acceptance/not-found-test.js` at line 17
 
 ```js
-    loggerError = Ember.Logger.error;
-    adapterException = Ember.Test.adapter.exception;
-    Ember.Test.adapter.exception = () => {};
-    Ember.Logger.error = () => {};
-    return authPage.login();
+loggerError = Ember.Logger.error;
+adapterException = Ember.Test.adapter.exception;
+Ember.Test.adapter.exception = () => {};
+Ember.Logger.error = () => {};
+return authPage.login();
 ```
 
 ### Unknown Global
@@ -216,11 +215,11 @@ export default function waitForError(opts) {
 **Location**: `tests/acceptance/not-found-test.js` at line 24
 
 ```js
-  hooks.afterEach(function() {
-    Ember.Test.adapter.exception = adapterException;
-    Ember.Logger.error = loggerError;
-    return logout.visit();
-  });
+hooks.afterEach(function () {
+  Ember.Test.adapter.exception = adapterException;
+  Ember.Logger.error = loggerError;
+  return logout.visit();
+});
 ```
 
 ### Unknown Global

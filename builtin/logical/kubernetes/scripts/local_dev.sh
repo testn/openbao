@@ -38,7 +38,7 @@ vault server \
   -dev \
   -log-level="debug" \
   -config="$SCRATCH/vault.hcl" \
-  -dev-ha -dev-transactional -dev-root-token-id=root \
+  -dev-ha -dev-root-token-id=root \
   &
 sleep 2
 VAULT_PID=$!

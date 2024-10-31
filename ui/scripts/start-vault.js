@@ -28,14 +28,7 @@ async function processLines(input, eachLine = () => {}) {
   try {
     const vault = testHelper.run(
       'bao',
-      [
-        'server',
-        '-dev',
-        '-dev-ha',
-        '-dev-transactional',
-        '-dev-root-token-id=root',
-        '-dev-listen-address=127.0.0.1:9200',
-      ],
+      ['server', '-dev', '-dev-ha', '-dev-root-token-id=root', '-dev-listen-address=127.0.0.1:9200'],
       false
     );
     processLines(vault.stdout, function (line) {

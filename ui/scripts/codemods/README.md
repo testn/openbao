@@ -11,4 +11,5 @@ It's a good idea to validate the output to ensure that the intended transforms h
 If there are issues with some of the files, simply revert the changes via git, tweak the codemod and run again.
 
 ## Example
+
 `npx ember-template-recast "**/*.hbs" -t ./scripts/codemods/no-quoteless-attributes.js`
